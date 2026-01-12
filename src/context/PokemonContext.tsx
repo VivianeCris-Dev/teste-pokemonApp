@@ -18,8 +18,7 @@ export function PokemonProvider({ children }: any) {
   const [nextId, setNextId] = useState<number | null>(null);
 
   async function loadPokemon(id: string) {
-    const cleanId = id.replace(/\D/g, ''); // 🔥 remove tudo que não é número
-
+    const cleanId = id.replace(/\D/g, '');
     if (!cleanId) return;
 
     try {
